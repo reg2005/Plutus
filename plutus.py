@@ -50,7 +50,7 @@ def address(publickey): # Public Key -> Wallet Address
 
 def balance(address): # Query API for wallet balance
     try:
-        API = requests.get("https://bitcoinlegacy.blockexplorer.com/api/addr/" + str(address) + "/balance")
+        API = requests.get("https://blockchain.info/q/addressbalance/" + str(address) + "/balance")
         if (API.status_code == 429):
             pause.p += 1
             if (pause.p >= 10):
