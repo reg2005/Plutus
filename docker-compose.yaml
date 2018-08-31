@@ -6,4 +6,4 @@ services:
     volumes:
       - .:/var/www/html
 
-    command: bash -c "pip install -r requirements.txt && python plutus.py"
+    command: bash -c "pip install -r requirements.txt && python plutus.py -m`"
