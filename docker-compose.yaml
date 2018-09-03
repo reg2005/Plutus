@@ -2,6 +2,11 @@ version: '3'
 services:
   net1:
     image: python:3.6.5
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
     working_dir: /var/www/html
     volumes:
       - .:/var/www/html
